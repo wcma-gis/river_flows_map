@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <title>WCMA Demo</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
   <script src="https://wcma.vic.gov.au/Assets/RiverCharts/RiverCharts.js?cb=3"></script>
   <style>
@@ -42,7 +42,11 @@
   </div>
   <script>
     window.jQuery_WCMA=window.jQuery;
-    $(function(){RiverCharts.RiverCharts();});
+    $(function(){
+      $('[data-toggle="popover"]').popover();
+      $('[data-toggle="tooltip"]').tooltip();
+      RiverCharts.RiverCharts();
+    });
   </script>
 </body>
 </html>
