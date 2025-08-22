@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>WCMA Demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.6/underscore-min.js"></script>
+  <script src="https://wcma.vic.gov.au/Assets/RiverCharts/RiverCharts.js?cb=3"></script>
+  <style>
+    .map-top{background-image:url("https://wcma.vic.gov.au/Assets/RiverCharts/mapimages/map-top.png")!important}
+    .map-left{background-image:url("https://wcma.vic.gov.au/Assets/RiverCharts/mapimages/map-left.png")!important}
+    .map-main{background-image:url("https://wcma.vic.gov.au/Assets/RiverCharts/mapimages/map-main.png")!important}
+    .map-right{background-image:url("https://wcma.vic.gov.au/Assets/RiverCharts/mapimages/map-right.png")!important}
+  </style>
+  <style>
+    .popover{max-width:90%;width:400px}
+    .popover+.tooltip{opacity:0!important}
+    .popover-content hr{margin:10px}
+    .popover-content .table>tbody>tr:first-child>td{border-top:0}
+    .popover-content .table{margin-bottom:0}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>WCMA River Flows Demo</h2>
+    <div id="RiverChartsContainer"></div>
+  </div>
+  <div id="RiverChartsModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.jQuery_WCMA=window.jQuery;
+    $(function(){RiverCharts.RiverCharts();});
+  </script>
+</body>
+</html>
